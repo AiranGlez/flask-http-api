@@ -27,3 +27,4 @@ jobs:
               run: | 
                   cd flask
                   python app.py
+                  curl http://localhost:5000/steam
