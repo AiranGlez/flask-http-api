@@ -1,8 +1,8 @@
 import pytest
-# from src import app
+from src.app import app
 
-def test_sum():
-    assert sum(2,2) == 4
+def test_index_route():
+    response = app.test_client().get('/test')
 
-def sum(a, b):
-    return a + b
+    assert response.status_code == 200
+    assert response.data.decode('utf-8') == '<p>OK</p>'
