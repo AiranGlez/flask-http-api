@@ -26,4 +26,8 @@ jobs:
             - name: Run Flask app
               run: | 
                   cd flask
-                  python -m flask run
+                  python -m flask run --debug
+            
+            - name: Kill Flask app process
+              run: | 
+                  kill $(pgrep -f flask)
