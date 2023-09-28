@@ -25,5 +25,5 @@ jobs:
 
             - name: Run Flask test
               run: | 
-                  cd tests
+                  cd flask_api/tests
                   python -m pytest test.py
